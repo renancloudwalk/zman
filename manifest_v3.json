@@ -1,0 +1,19 @@
+{
+    "name" : "zman",
+    "version" : "1.0",
+    "description" : "zman",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": ["*://*.example.com/*"],
+            "js": [
+                "zman.js", "run_wasm.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["zman_bg.wasm"],
+        "matches": ["*://*.example.com/*"]
+    }],
+    "manifest_version": 3
+}
